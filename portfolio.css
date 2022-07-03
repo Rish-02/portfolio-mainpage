@@ -1,0 +1,268 @@
+:root{
+    font-size: 50px;
+}
+example::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .example {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+
+  .w-60 {
+    width: 60%;
+}
+.w-30 {
+    width: 30%;
+}
+.w-10{
+    width: 10%;
+}
+.w-100 {
+    width: 100%;
+}
+.skill-item {
+    width: 50%;
+    font-size: 40px;
+}
+.section {
+    height: 10vh;
+}
+@media only screen and (max-width: 600px) {
+    .bio {
+        flex-direction: column;
+    }
+    .profile-subsection {
+        width: 100%;
+    }
+    .profile-img-container {
+        padding-top: 2rem;
+    }
+    .skill-item {
+        width: 100%;
+        margin: 0.25rem 0;
+    }
+    .project-item {
+        flex-direction: column;
+    }
+    .project-image {
+        width: 80%;
+        margin: 0 auto;
+    }
+    .connect {
+        font-size: 50%;
+    }
+    .ty {
+        font-size: 60%;
+    }
+}
+
+.vector1 {
+    background-image: url('./images/Vector\ 7.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: fixed;
+    top: 33vh;
+    right: 4%;
+    height: 47%;
+    width: 27%;
+    z-index: -1;
+}
+.vector2 {
+    background-image: url('./images/Vector\ 8.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: fixed;
+    top: 15vh;
+    right: 25%;
+    height: 47%;
+    width: 27%;
+    z-index: -2;
+}
+.vector3 {
+    background-image: url('./images/Vector\ 9.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: fixed;
+    top: 67vh;
+    right: 47%;
+    height: 24%;
+    width: 14%;
+    z-index: -2;
+}
+body {
+    margin: 0;
+    background: black;
+    color: white;
+}
+.container {
+    margin: 6vh 0;
+    padding: 0 10%;
+    min-height: 80vh;
+}
+.navbar {
+    position: fixed;
+    padding: 0;
+    background-color: black;
+    /* margin-bottom: 13vh; */
+    top: 0;
+    width: 100%;
+    height: 10vh;
+}
+
+.active {
+    font-weight: bold;
+}
+.nav-control {
+    width: 5rem;
+    height: 100%;
+    font-size: large;
+    display: flex;
+    align-items: center;
+}
+.open-sans {
+    font-family: 'Open Sans';
+}
+.f-right{
+    float: right;
+}
+
+#nav-options {
+    padding: 0;
+    display: flex;
+    width: 100%;
+    list-style-type: none;
+    justify-content: space-between;
+}
+.text-center {
+    text-align: center;
+}
+.empty-1 {
+    width: 10%;
+    height: 60px;
+}
+
+.bio {
+    display: flex;
+    justify-content: space-between;
+}
+.heading-bio {
+    font-size: 120%;
+    color: #E4AE6F;
+    margin: 10px auto;
+}
+.bio-about {
+    font-size: 60%;
+    margin: auto 0;
+}
+.scroll-down {
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 20%;
+}
+
+.profile-img-container {
+    width: 100%;
+    height: 0;
+    padding-bottom: 100%;
+}
+
+.profile-image {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 0.3rem;
+}
+.name {
+    font-size: 50%;
+    color: #00CAFF;
+    margin-bottom: 0.1rem;
+}
+.name-separator {
+    width: 35%;
+    height: 3px;
+    color: white;
+    background-color: white;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.role {
+    margin-top: 0.2rem;
+    font-size: 50%;
+    color: #E4AE6F;
+}
+
+.heading-skills, .heading-projects {
+    font-size: 80%;
+    color: #E4AE6F;
+    margin: 10px auto;
+}
+.wrapping {
+    display: flex;
+    flex-wrap: wrap;
+}
+.nav-item a{
+    color: white;
+    text-decoration: none;
+}
+
+.project-item{
+    background-color:#2322226e;
+    display: flex;
+    padding: 0;
+    font-size: 40%;
+}
+
+.project-desc{
+    padding-bottom: 1rem;
+    padding-left: 1rem;
+
+}
+
+.project-image img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.connect{
+    color: #E4AE6F;
+    margin: 1rem;
+    font-size: 80%;
+}
+
+.ty{
+    font-size: 100%;
+}
+
+.contact-link{
+    background-color:#2322226e;
+    display: flex;
+    margin: 2rem auto;
+    width: 5rem;
+    justify-content: space-between;
+}
+
+@media only screen and (max-width: 600px) {
+    .nav-control {
+        float: none;
+        text-align: center;
+        width: 100%;
+        height: 100%;
+    }
+    #nav-options {
+        width: 100%;
+        justify-content: space-evenly;
+    }
+    .empty-1 {
+        display: none;
+    }
+    .connect {
+        font-size: 50%;
+    }
+    .ty, .contact-link {
+        font-size: 60%;
+    }
+}
