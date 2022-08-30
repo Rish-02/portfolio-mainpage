@@ -4,7 +4,70 @@
 example::-webkit-scrollbar {
     display: none;
   }
+ 
   
+
+  @-webkit-keyframes rotating /* Safari and Chrome */ {
+    from {
+      -webkit-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    to {
+      -webkit-transform: rotate(360deg);
+      -o-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+  @keyframes rotating {
+    from {
+      -ms-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -webkit-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    to {
+      -ms-transform: rotate(360deg);
+      -moz-transform: rotate(360deg);
+      -webkit-transform: rotate(360deg);
+      -o-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+
+  @-webkit-keyframes rotating-anti /* Safari and Chrome */ {
+    from {
+      -webkit-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    to {
+      -webkit-transform: rotate(-360deg);
+      -o-transform: rotate(-360deg);
+      transform: rotate(-360deg);
+    }
+  }
+  @keyframes rotating-anti {
+    from {
+      -ms-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -webkit-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    to {
+      -ms-transform: rotate(-360deg);
+      -moz-transform: rotate(-360deg);
+      -webkit-transform: rotate(-360deg);
+      -o-transform: rotate(-360deg);
+      transform: rotate(-360deg);
+    }
+  }
+
+
+
+
   /* Hide scrollbar for IE, Edge and Firefox */
   .example {
     -ms-overflow-style: none;  /* IE and Edge */
@@ -46,8 +109,10 @@ example::-webkit-scrollbar {
     }
     .project-item {
         flex-direction: column;
+        
     }
     .project-image {
+        object-fit: contain;
         width: 80%;
         margin: 0 auto;
     }
@@ -70,6 +135,13 @@ example::-webkit-scrollbar {
     width: 27%;
     z-index: -1;
 }
+.vector1 {
+    -webkit-animation: rotating 10s linear infinite;
+    -moz-animation: rotating 10s linear infinite;
+    -ms-animation: rotating 10s linear infinite;
+    -o-animation: rotating 10s linear infinite;
+    animation: rotating 10s linear infinite;
+}
 .vector2 {
     background-image: url('./images/Vector\ 8.svg');
     background-repeat: no-repeat;
@@ -81,6 +153,13 @@ example::-webkit-scrollbar {
     width: 27%;
     z-index: -2;
 }
+.vector2 {
+    -webkit-animation: rotating-anti 10s linear infinite;
+    -moz-animation: rotating-anti 10s linear infinite;
+    -ms-animation: rotating-anti 10s linear infinite;
+    -o-animation: rotating-anti 10s linear infinite;
+    animation: rotating-anti 10s linear infinite;
+  }
 .vector3 {
     background-image: url('./images/Vector\ 9.svg');
     background-repeat: no-repeat;
@@ -92,6 +171,13 @@ example::-webkit-scrollbar {
     width: 14%;
     z-index: -2;
 }
+.vector3 {
+    -webkit-animation: rotating 10s linear infinite;
+    -moz-animation: rotating 10s linear infinite;
+    -ms-animation: rotating 10s linear infinite;
+    -o-animation: rotating 10s linear infinite;
+    animation: rotating 10s linear infinite;
+  }
 body {
     margin: 0;
     background: black;
@@ -208,7 +294,13 @@ body {
     text-decoration: none;
 }
 
+.nav-item a:hover{
+    color: #E4AE6F;
+    transform: s
+}
+
 .project-item{
+    height: 32vh;
     background-color:#2322226e;
     display: flex;
     padding: 0;
@@ -222,8 +314,9 @@ body {
 }
 
 .project-image img{
-    width: 100%;
-    height: auto;
+    /* width: 100%; */
+    height: 100%;
+    width: auto;
     object-fit: cover;
 }
 
@@ -243,6 +336,25 @@ body {
     margin: 2rem auto;
     width: 5rem;
     justify-content: space-between;
+}
+
+.contact-item1:hover {
+    transform:translateY(-20px);
+    transition-duration: 400ms;
+    color: #E4AE6F;
+}
+
+.contact-item2:hover {
+    transform:translateY(-20px);
+    transition-duration: 400ms;
+    color: #E4AE6F;
+    
+}
+
+.contact-item3:hover {
+    transform:translateY(-20px);
+    transition-duration: 400ms;
+    color: #E4AE6F;
 }
 
 @media only screen and (max-width: 600px) {
